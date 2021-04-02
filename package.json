@@ -1,0 +1,29 @@
+{
+  "name": "Team-Profile-Generator-Using-OOP",
+  "version": "1.0.0",
+  "description": "## Description The goal of this project is to use node.js and the inquirer npm package to prompt the user to build a profile for their team of software engineers. The final result is a well organized HTML page (and a CSS styling sheet) that is generated dynamically from the user's inputs into the command line after running `node index.js`.  (insert gif demo of project here)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordynnmancini/Team-Profile-Generator-Using-OOP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordynnmancini/Team-Profile-Generator-Using-OOP/issues"
+  },
+  "homepage": "https://github.com/jordynnmancini/Team-Profile-Generator-Using-OOP#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
