@@ -5,9 +5,10 @@ const Employee = require('./lib/employee');
 const Manager = require('./lib/manager');
 const Intern = require('./lib/intern'); 
 const {managerQuestions, promptQuestion, engineerQuestions, internQuestions} = require('./src/prompts');
-// const promptQuestion = require('./src/prompts'); 
-// const engineerQuestions = require('./src/prompts'); 
-// const internQuestions = require('./src/prompts'); 
+const Engineer = require('./lib/engineer');
+
+//Declare
+let fullTeamArray = []; 
 
 //Initialize when user enters "node index.js"
 Initialize(); 
@@ -17,9 +18,12 @@ function Initialize() {
         .prompt(managerQuestions)
         .then((answers) => {
             // use constructor function to create a new manager / push to an array of teammates
-            //writeFile
-            addTeamMembers();
+            const teamManager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerNumber);
+            fullTeamArray.push(teamManager); 
 
+            //writeFile
+
+            addTeamMembers();
         });
 };
 
@@ -45,6 +49,10 @@ function addEngineer() {
     inquirer
         .prompt(engineerQuestions)
         .then((answers) => {
+            // constructor
+            const teamMember = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+            fullTeamArray.push(teamMember); 
+
             // fs.appendFile for new blocks of code 
             '<p>kncdnjdnfsdnf</p>'
 
@@ -57,6 +65,10 @@ function addIntern() {
     inquirer
     .prompt(internQuestions)
     .then((answers) => {
+        //constructor
+        const teamMember = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+        fullTeamArray.push(teamMember);  
+
         //fsAppendFile
 
         addTeamMembers(); 
