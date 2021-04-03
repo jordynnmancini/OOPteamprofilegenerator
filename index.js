@@ -3,11 +3,12 @@ const inquirer = require('inquirer');
 const fs = require('fs'); 
 const Employee = require('./lib/employee');
 const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern'); 
 const {managerQuestions, promptQuestion, engineerQuestions, internQuestions} = require('./src/prompts');
-const Engineer = require('./lib/engineer');
+const generateHTML = require('./src/member'); 
 
-//Declare
+//Declare (might not need this?)
 let fullTeamArray = []; 
 
 //Initialize when user enters "node index.js"
@@ -22,6 +23,10 @@ function Initialize() {
             fullTeamArray.push(teamManager); 
 
             //writeFile
+            const htmlPageContent = generateHTML(answers);
+            
+            fs.writeFile('./dist/index.html', htmlPageContent, (err) => 
+            err ? console.log(err) : console.log('Thank you for adding a manager!'));
 
             addTeamMembers();
         });
@@ -53,8 +58,7 @@ function addEngineer() {
             const teamMember = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
             fullTeamArray.push(teamMember); 
 
-            // fs.appendFile for new blocks of code 
-            '<p>kncdnjdnfsdnf</p>'
+            // fs.appendFile
 
             addTeamMembers();
 
@@ -74,8 +78,3 @@ function addIntern() {
         addTeamMembers(); 
     })
 }
-
-     //writeFile - member.js folder 
-        // const htmlPageContent = generateHTML(answers); 
-        // fs.writeFile('dist/index.html', htmlPageContent, (err) =>
-        // err ? console.log(err) : console.log('Successfully created index.html file!'));
