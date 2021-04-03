@@ -4,10 +4,11 @@
   "description": "## Description The goal of this project is to use node.js and the inquirer npm package to prompt the user to build a profile for their team of software engineers. The final result is a well organized HTML page (and a CSS styling sheet) that is generated dynamically from the user's inputs into the command line after running `node index.js`.  (insert gif demo of project here)",
   "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "_tests_"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose test/*"
   },
   "repository": {
     "type": "git",
