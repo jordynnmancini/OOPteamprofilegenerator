@@ -8,7 +8,7 @@ The goal of this project is to use node.js and the inquirer npm package to promp
 - [Installation](#installation)
 - [Tests](#tests)
 - [Usage](#usage)
-- [Credits](#credits)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
@@ -18,7 +18,7 @@ Run `npm i` to install dependencies.
 Use `npm run test` in the command line to run the tests. Tests can be found in the `_tests_/` folder. 
 
 ## Usage 
-This project requires you to download `node.js` onto your local machine. You will also need to use the `npm inquirer` package.
+This project requires you to download `node.js` onto your local machine. You will also need to use the `npm inquirer` package & `npm jest`.
 
 ## Contributing 
 This was done as a homework assignment for the Ohio State Coding Book Camp. Do not make changes to the master branch, but feel free to fork & use/improve upon this code.
