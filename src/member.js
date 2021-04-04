@@ -1,4 +1,4 @@
-// generate starter HTML with manager info (used for fs.writeFile)
+// writeFile with manager info 
 const generateHTML = (answers) => {
 return `<!DOCTYPE html>
 <html lang="en">
@@ -20,13 +20,37 @@ return `<!DOCTYPE html>
         </ul>
       </div>
     
-</body>
-</html>`; 
+`; 
 
 };
 
-// generate Engineer Card (appendFile)
+//appendFile with engineer info  
+const appendEngHTML = (answers) => {
+  return `<div class="card" style="width: 18rem;">
+  <div class="card-img-top p-3 mb-2 bg-primary text-white"> ${answers.engineerName} </br> Engineer </div>
+  <ul class="list-group list-group-flush p-3 mb-2 bg-light text-dark">
+    <li class="list-group-item border border-4">ID: ${answers.engineerId}</li>
+    <li class="list-group-item border border-4">Email: ${answers.engineerEmail}</li>
+    <li class="list-group-item border border-4"><a href="https://github.com/${answers.engineerGithub}">Github: ${answers.engineerGithub}</a></li>
+  </ul>
+</div>`;
+}
 
-//generate Intern Card (appendFile)
+//appendFile with intern info 
+const appendInternHTML = (answers) => {
+  return `<div class="card" style="width: 18rem;">
+  <div class="card-img-top p-3 mb-2 bg-primary text-white"> ${answers.internName} </br> Intern </div>
+  <ul class="list-group list-group-flush p-3 mb-2 bg-light text-dark">
+    <li class="list-group-item border border-4">ID: ${answers.internId}</li>
+    <li class="list-group-item border border-4">Email: ${answers.internEmail}</li>
+    <li class="list-group-item border border-4">School: ${answers.internSchool}</li>
+  </ul>
+</div>`;
+}
 
-module.exports = generateHTML; 
+
+module.exports = {
+  generateHTML,
+  appendEngHTML,
+  appendInternHTML,
+}; 

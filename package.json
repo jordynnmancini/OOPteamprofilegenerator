@@ -5,7 +5,7 @@
   "main": "index.js",
   "directories": {
     "lib": "lib",
-    "test": "_tests_"
+    "test": "test"
   },
   "scripts": {
     "test": "jest --verbose test/*"
