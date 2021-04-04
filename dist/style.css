@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: white; 
+    background-color: coral;
+    padding: 30px; 
+}
+
+.cards-container {
+    display: flex;
+    float: left;
+    flex-wrap: wrap; 
+}
+
+.card {
+    margin: 10px; 
+    box-shadow: 8px 8px 6px #888888;
+
+}

@@ -40,8 +40,8 @@ function addTeamMembers() {
                     addIntern();
                     break;
                 case 'I dont want to add any more team members':
-                    fs.appendFile('./dist/index.html', `</body> </html>`, (err) =>
-                        err ? console.log(err) : console.log('Finished'));
+                    fs.appendFile('./dist/index.html', `</div> </body> </html>`, (err) =>
+                        err ? console.log(err) : console.log('process has finished.'));
                     console.log('You have completed building your team! Check the /dist folder for your final html.')
                     break;
             }
